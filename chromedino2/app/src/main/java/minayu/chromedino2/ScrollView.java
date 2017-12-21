@@ -120,6 +120,11 @@ public class ScrollView extends View {
             canvas.drawText(gameOverStr, screenWidth / 2, screenHeight / 2, gameOverPaint);
             canvas.drawText("SCORE: " +String.valueOf(score), screenWidth / 2, screenHeight / 2 - 100, scorePaint);
             canvas.drawText("TAP TO GAME RESTART", screenWidth / 2, screenHeight / 2 + 200, scorePaint);
+            //ウェイト処理
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+            }
             isGameOver();
         }
 
